@@ -5,55 +5,75 @@
 {% block main %}
 <main id="page-contact">
   <h1>Nous Contacter</h1>
-  <form method="post" class="form">
-    <div class="form-group">
-      <label for="username">Nom</label>
-      <input
-        type="text"
-        id="username"
-        name="username"
-        required
-        value="{{ request.form['username'] or '' }}"
-        placeholder="Votre nom"
-      />
-    </div>
-    <div class="form-group">
-      <label for="surname">Prenom</label>
-      <input
-        type="text"
-        id="surname"
-        name="surname"
-        required
-        value="{{ request.form['username'] or '' }}"
-        placeholder="Votre prenom"
-      />
-    </div>
+  <div class="formulaire">
+    <div id="info">
+      <p class="title">Formulaire</p>
+      <form method="get" class="colonne">
+        <div class="form-example">
+          <div class="nom">
+            <label for="name">Nom* </label>
+            <input type="text" id="name" required />
+            <p class="error error-nom">Erreur sur le nom</p>
+          </div>
 
-    <div class="form-group">
-      <label for="email">Email</label>
-      <input
-        type="email"
-        id="email"
-        name="email"
-        required
-        value="{{ request.form['email'] or '' }}"
-        placeholder="votre@email.com"
-      />
-    </div>
+          <div class="prenom">
+            <label for="name">Prenom* </label>
+            <input type="text" id="Prenom" required />
+            <p class="error error-prenom">Erreur sur le prenom</p>
+          </div>
+        </div>
 
-    <div class="form-group">
-      <label for="message">message</label>
-      <input
-        type="message"
-        id="message"
-        name="message"
-        required
-        placeholder="Votre message"
-      />
-    </div>
+        <div class="form-example">
+          <div class="email">
+            <label for="email">E-mail* </label>
+            <input type="email" class="email" id="email" />
+            <p class="error error-email">Erreur sur l'email</p>
+          </div>
+          <div class="conf-email">
+            <label for="conf-email-input">Confirmer votre e-mail* </label>
+            <input type="email" id="conf-email-input" />
+            <p class="error error_email">Erreur sur l'email</p>
+          </div>
+        </div>
 
-    <button type="submit" class="btn btn-primary">Envoyer</button>
-  </form>
+        <div class="form-example">
+          <div class="mot">
+            <label for="conf-password-input">Mot de passe* </label>
+            <input type="text" class="password" id="conf-password-input" />
+            <p class="error error-mot-majuscule">
+              Erreur sur le mot de passe mettre une majuscule
+            </p>
+            <p class="error error-mot-chiffre">
+              Erreur sur le mot de passe mettre un chiffre
+            </p>
+            <p class="error error-mot-taille">
+              Erreur le mot de passe n'est pas assez long
+            </p>
+
+            <p class="error error-mot-charctere-spe">
+              Erreur le mot de passe n'a pas de charctere speciale
+            </p>
+          </div>
+          <div class="conf-mot">
+            <label for="password">Confirmer votre mot de passe* </label>
+            <input type="text" class="password" id="password" required />
+            <p class="error error-conf">Erreur sur le mot de passe</p>
+          </div>
+        </div>
+        <label id="cocher"
+          ><input type="radio" name="radio" />En cochant cette case vous
+          acceptez nos conditions d'utilisation
+        </label>
+        <div class="error conditions">
+          Vous devez accepter nos conditions d'utilisation
+        </div>
+        <p>*Ces champs sont obligatoires</p>
+        <div class="valider">
+          <input type="submit" value="Enregistrer" />
+        </div>
+      </form>
+    </div>
+  </div>
 </main>
 
 {% endblock %}

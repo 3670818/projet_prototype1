@@ -275,6 +275,51 @@ form {
 #page-contact {
   /* background-color: aliceblue; */
 }
+f #info {
+  background-color: #4a5363;
+  border-radius: 25px;
+  margin: 20px;
+  padding: 40px;
+}
+.title {
+  color: #81fcdf;
+  display: flex;
+  justify-content: center;
+  font-size: xx-large;
+  animation: couleur 5s;
+}
+@keyframes couleur {
+  0% {
+    color: black;
+  }
+  50.0% {
+    color: gray;
+  }
+  100.0% {
+    color: #81fcdf;
+  }
+}
+@keyframes bouger {
+  0% {
+    transform: translate(0vw, 0vh) rotate(0);
+  }
+  25% {
+    transform: translate(95vw, 0vh) rotate(360deg);
+  }
+  50% {
+    transform: translate(95vw, 90vh) rotate(0);
+  }
+  75% {
+    transform: translate(0vw, 90vh) rotate(360deg);
+  }
+  100% {
+    transform: translate(0vw, 0vh) rotate(0deg);
+  }
+}
+.colonne {
+  display: flex;
+  flex-direction: column;
+}
 form {
   display: flex;
   flex-direction: column;
@@ -285,7 +330,28 @@ form {
 * {
   outline: 0 !important;
 }
+.formulaire {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: translateFromLeft 1s ease-in-out;
+}
 
+@keyframes translateFromLeft {
+  from {
+    transform: translateX(-200%);
+    background-color: gray;
+  }
+  to {
+    transform: translateX(0);
+    background-color: black;
+  }
+}
+.form-example {
+  display: flex;
+  flex-direction: column;
+}
 input {
   margin-top: 1.5%;
   background: transparent;
@@ -294,7 +360,7 @@ input {
   border-bottom: 2px solid white;
   font-size: 1.1em;
   font-weight: 300;
-  color: gray;
+  color: #81fcdf;
   margin-bottom: 15px;
 }
 
@@ -303,11 +369,75 @@ input {
   padding: 10px;
   cursor: pointer;
 }
+
 .error {
   display: none;
   color: red;
   font-size: large;
 }
+
+@media (min-width: 768px) {
+  .form-example {
+    display: flex;
+    flex-direction: row;
+    align-items: first baseline;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+    gap: 20px;
+    padding-bottom: 15px;
+  }
+  /* .formulaire {
+    justify-content: space-between;
+  } */
+  #info {
+    margin: 0px;
+    padding: 0px;
+  }
+  .valider {
+    display: flex;
+    justify-content: center;
+  }
+}
+.test {
+  display: none;
+  width: 35 em;
+}
+
+@keyframes scale-phenix {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes rotate-loader {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.fini {
+  display: flex;
+  justify-content: center;
+}
+#merci {
+  display: none;
+  font-size: xxx-large;
+  color: #4a5363;
+}
+
+/* label:hover {
+  font-size: larger;
+  animation: translateFromLeft 1s ease-in-out;
+}
+.title:hover {
+  animation: translateFromLeft 1s ease-in-out;
+  color: aliceblue;
+} */
+
 /* fin du cote css de la page contacter */
 /*  */
 /*  */
