@@ -445,3 +445,30 @@ input {
 /*  */
 /*  */
 /*  */
+
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  debut de la page a propos  */
+#produit {
+  img {
+    border-radius: 15px;
+  }
+}
+.info-profil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/*  fin de la page a propos  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */

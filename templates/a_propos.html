@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+<!--  -->
+{% block title %}Test{% endblock %}
+<!--  -->
+{% block main %}
+<main id="a_propos">
+  <div class="produits">
+    <img
+      class="image_slide"
+      src="{{ url_for('static', filename='images/photo-de-profil.jpg') }}"
+    />
+    <div class="info-profil" id="info-profil">
+      <h1>Nom du patissier</h1>
+      <p class="description">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, at
+        eaque pariatur iure placeat veritatis exercitationem voluptas tenetur
+        consequuntur maiores fuga voluptates commodi quia. Qui doloribus atque
+        iste aperiam excepturi!
+      </p>
+    </div>
+  </div>
+</main>
+{% endblock %}

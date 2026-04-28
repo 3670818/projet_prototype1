@@ -33,6 +33,11 @@ def contact():
     return render_template("contact.html")
 
 
+@app.route("/a_propos")
+def propos():
+    return render_template("a_propos.html")
+
+
 @app.route("/hello")
 @app.route("/hello/<name>")
 def hello(name=None):
