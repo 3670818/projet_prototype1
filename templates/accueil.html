@@ -13,7 +13,7 @@
         <p><a href="#lien_patisserie">Nos patisseries</a></p>
       </button>
       <button>
-        <p><a href="#lien_patisserie">A propos</a></p>
+        <p><a href="{{ url_for('propos') }}">A propos</a></p>
       </button>
       <button>
         <p><a href="{{ url_for('contact') }}">Contacter</a></p>
@@ -246,14 +246,5 @@
       />
     </div>
   </section>
-  <div id="fenetre">
-    <section id="panier-header">
-      <h1>Votre panier</h1>
-      <button class="ferm"><i class="fa-solid fa-xmark"></i></button>
-    </section>
-    <p id="vide">Votre panier est vide</p>
-    <p id="tarte-ajout">Tarte aux citron meringué</p>
-    <button id="panier-footer"><h2>Valider</h2></button>
-  </div>
 </main>
-{% endblock %}
+{% include "popup.html" %} {% endblock %}

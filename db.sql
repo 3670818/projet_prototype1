@@ -25,4 +25,4 @@ INSERT INTO user (username, password) VALUES ('test', 'test123');
 
 INSERT INTO post (author_id, title, body) VALUES 
   (1, 'Premier article', 'Ceci est le contenu du premier article.'),
-  (2, 'Article de test', 'Un autre article pour tester l\'application.');
+  (2, 'Article de test', 'Un autre article pour tester l''application ');
